@@ -75,7 +75,7 @@
 
 
     .mainImage {
-        background: url("../testimg/main-office.jpg");
+        background: url("main-office.jpg");
         width:100%;
         height:600px;
         /* background-size: cover; */
