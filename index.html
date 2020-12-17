@@ -1,90 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../testcss/reset.css">
+    <link rel="stylesheet" href="../testcss/test1214.css">
+    <title>Document</title>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
-    </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
+
+    <header>
+        <h1>
+            <img class=head-logo src="../testimg/fusohlogo.PNG" alt="fusohlogo">
+        </h1>
+
+        <nav class=nav-bar>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">メニュー</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+
+            <!-- <form id="form02" action="#">
+                <input id="input02" type="text" placeholder="word input">
+            </form> -->
+
+        </nav>
+
+        <!-- スマホ用ハンバーガーメニュー -->
+        <div id="nav-drawer">
+            <input class="nav-unshown" id="nav-input" type="checkbox">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <div id="nav-content">
+                <ul>
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">メニュー</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+                
+            </div>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
+
+    </header>
+
+    <main>
+        <article>
+            <div class=mainImage>
+                <div class=mainImage-box>
+                    <div  class=mainImage-logo>
+                        <img src="../testimg/isaralogo.png" alt="isara">
+                    </div>
+                    <div class=mainImage-font>
+                        扶桑鋼管だからできる<br>
+                        グローバルなコーディネート
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class=works>
+                <div class=works-font>
+                    Total Coordination
+                </div>
+
+                <div class=works-fhoto>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="../testimg/photo04.jpg" alt="素材">
+                            </a>
+                            <p>
+                                素材在庫・調達
+                            </p>
+                            
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="../testimg/photo05.jpg" alt="素材">
+                            </a>
+                            <p>
+                                素材在庫・調達
+                            </p>
+
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="../testimg/photo06.jpg" alt="素材">
+                            </a>
+                            <p>
+                                素材在庫・調達
+                            </p>
+
+                        </li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <div class=topics>
+                <p>
+                    新着情報
+                </p>
+
+                <div class=topics-news>
+                    <dl>
+                        <dt>20180101</dt>
+                        <dd>「SECURITY ACTION宣言」を実施しましたのでご連絡いたします！</dd>
+                    </dl>
+                    <dl>
+                        <dt>20180101</dt>
+                        <dd>新着情報の内容が入ります。</dd>
+                    </dl>
+                    <dl>
+                        <dt>20180101</dt>
+                        <dd>新着情報の内容が入ります。</dd>
+                    </dl>
+                </div>
+            </div>
+
+
+        </article>
+
+        <aside>
+            <div>
+
+
+            </div>
+        </aside>
+
+    </main>
+
+    <footer>
+
+
+    </footer>
+
+    
+
+
+
+
 </body>
 </html>
