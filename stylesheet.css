@@ -25,10 +25,9 @@
         top:0px;
         left: 0px;
         background-color: white;
-        /* ヘッダー固定をすると時項目 */
-        /* position: fixed;
-        top: 0; */
-        /* border-bottom:1px lightgray solid; */
+        -webkit-backface-visibility:hidden;
+        backface-visibility:hidden;
+        overflow:hidden;
     }
 
     main {
@@ -226,10 +225,9 @@
         width:100%;
         height:60px;
         background-color: white;
-        /* ヘッダー固定をすると時項目 */
-        /* position: fixed;
-        top: 0; */
-        /* border-bottom:1px lightgray solid; */
+        -webkit-backface-visibility:hidden;
+        backface-visibility:hidden;
+        overflow:hidden;
     }
 
     main {
