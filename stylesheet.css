@@ -16,14 +16,25 @@
 
 
     header {
+        position: fixed;
+        z-index: 10;
         display:flex;
         align-items: center;
         width:100%;
+        height:80px;
+        top:0px;
+        left: 0px;
+        background-color: white;
         /* ヘッダー固定をすると時項目 */
         /* position: fixed;
         top: 0; */
         /* border-bottom:1px lightgray solid; */
     }
+
+    main {
+        margin-top:80px;
+    }
+
 
 
     .head-logo {
@@ -75,16 +86,15 @@
 
 
     .mainImage {
-        background: url("main-office.jpg");
-        width:100%;
-        height:600px;
-        /* background-size: cover; */
-        /* background-size: contain; */
-        /* background-repeat: no-repeat; */
-        background-size: cover;
         position: relative;
-        
     }
+
+    .mainImage-photo {
+        width:100vw;
+    }
+
+
+
 
     .mainImage-box {
         position:absolute;
@@ -160,12 +170,33 @@
     }
 
     .topics dd {
-        margin-left: 5vw;
+        margin-left: 5rem;
     }
 
+    .footerwrap {
+        background-color: #ccc;
+        text-align: center;
+        padding: 30px;
+        font-size: 1.2rem;
+    }
 
+    .copyright a {
+        display:inline-block;
+        margin:0 5px;
+        color:black;
+    }
 
+    .twitter {
+        padding: 5px;
+        font-size:1.6rem;
+        
+    }
 
+    .twitter:before {
+        font-family: "Font Awesome 5 Brands";
+        font-weight:400;
+        content: '\f081';
+    }
 
 
 
@@ -186,14 +217,25 @@
     } */
 
     header {
+        position: fixed;
+        z-index: 10;
         display:flex;
         align-items: center;
+        top:0px;
+        left: 0px;
         width:100%;
+        height:60px;
+        background-color: white;
         /* ヘッダー固定をすると時項目 */
         /* position: fixed;
         top: 0; */
         /* border-bottom:1px lightgray solid; */
     }
+
+    main {
+        margin-top: 60px;
+    }
+
 
 
     .head-logo {
@@ -242,16 +284,14 @@
 
 
     .mainImage {
-        background: url("main-office.jpg");
-        width:100%;
-        height:220px;
-        /* background-size: cover; */
-        /* background-size: contain; */
-        /* background-repeat: no-repeat; */
-        background-size: cover;
         position: relative;
-        
     }
+
+    .mainImage-photo {
+        width:100vw;
+    }
+
+
 
     .mainImage-box {
         position:absolute;
@@ -261,15 +301,18 @@
         text-align: center;
     }
 
-    .mainImage-logo {
-        width:14rem;
+    .mainImage-logo img {
+        width:12rem;
     }
 
     .mainImage-font {
+        width:250px;
         color:white;
         font-size: 1rem;
         line-height: 1.4;
+        
     }
+
 
     .works-font {
         text-align: center;
@@ -312,18 +355,49 @@
 
     .topics dl {
         display:block;
-        font-size:1rem;
+        font-size:0.8rem;
         padding: 12px 12px;
         line-height: 1.6;
         border-bottom: 1px solid #ccc;
     }
 
-    .topics dd {
+    /* .topics dd {
         margin-left: 4px;
+    } */
+
+
+    .footerwrap {
+        background-color: #ccc;
+        text-align: center;
+        padding: 16px;
+        font-size: 0.8rem;
+    }
+
+    .copyright {
+        margin-bottom: 10px;
     }
 
 
+    .copyright a {
+        display:block;
+        margin:5px 0;
+        color:black;
+    }
 
+    /* .snsbox {
+        font-size: 1rem;
+    } */
+
+    .twitter {
+        /* padding: 2px; */
+        font-size: 1rem;
+    }
+
+    .twitter:before {
+        font-family: "Font Awesome 5 Brands";
+        font-weight:400;
+        content: '\f081';
+    }
 
 
 
@@ -421,13 +495,3 @@
     /*ハンバーガーメニューエンド＠＠＠＠＠＠＠＠＠＠*/
 
     
-
-
-
-
-
-
-
-
-}
-
