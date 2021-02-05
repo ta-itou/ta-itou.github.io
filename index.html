@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 初期化用CSS -->
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="stylesheet.css">
+
+    
+
+    <!-- スライダー用CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+    <link rel="stylesheet" href="test.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <title>Document</title>
+    <title>0203</title>
 </head>
 <body>
 
     <header>
+
         <h1>
             <img class="head-logo" src="fusohlogo.PNG" alt="fusohlogo">
         </h1>
@@ -20,19 +29,17 @@
                 <li><a href="#">ホーム</a></li>
                 <li><a href="#">NEWS</a></li>
                 <li><a href="#">メニュー</a></li>
-                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="./firstqs.html">お問い合わせ</a></li>
             </ul>
-
-            <!-- <form id="form02" action="#">
-                <input id="input02" type="text" placeholder="word input">
-            </form> -->
 
         </nav>
 
         <!-- スマホ用ハンバーガーメニュー -->
         <div id="nav-drawer">
             <input class="nav-unshown" id="nav-input" type="checkbox">
-            <label id="nav-open" for="nav-input"><span></span></label>
+            <div id="hanberger">
+                <label id="nav-open" for="nav-input"><span></span></label>
+            </div>
             <label class="nav-unshown" id="nav-close" for="nav-input"></label>
             <div id="nav-content">
                 <ul>
@@ -47,116 +54,108 @@
 
     </header>
 
+    <!-- ヘッダー固定調整 -->
+    <div class="head-br">
+    </div>
+    
     <main>
-        <article>
-
-            <div class="mainImage">
-                <img class="mainImage-photo" src="main-office.jpg" alt="isara">
-            
-                <div class=mainImage-box>
-                    <div  class=mainImage-logo>
-                        <img src="isaralogo.png" alt="isara">
-                    </div>
-                    <div class=mainImage-font>
-                        扶桑鋼管だからできる<br>
-                        グローバルなコーディネート
-                    </div>
-                </div>
-
+        <!-- スライダーメイン画像 -->
+        <div class="sec_inner">
+            <div class="slider">   
+                    <div><img src="slider_img01.jpg"alt=""></div>
+                    <div><img src="slider_img02.jpg"alt=""></div>   
             </div>
-            
-            <!-- <div class=mainImage>
-                <div class=mainImage-box>
-                    <div  class=mainImage-logo>
-                        <img src="isaralogo.png" alt="isara">
-                    </div>
-                    <div class=mainImage-font>
-                        扶桑鋼管だからできる<br>
-                        グローバルなコーディネート
-                    </div>
-                    
-                </div>
+        </div>
 
-            </div> -->
-
-            <div class=works>
-                <div class=works-font>
+        <!-- 事業選択セクション -->
+        <div class="work-sec">
+            <div class="work-sec-box">
+                <p class="work-sec-mainFont">
                     Total Coordination
-                </div>
-
-                <div class=works-fhoto>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="photo04.jpg" alt="素材">
-                            </a>
-                            <p>
-                                素材在庫・調達
-                            </p>
-                            
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <img src="photo05.jpg" alt="素材">
-                            </a>
-                            <p>
-                                素材在庫・調達
-                            </p>
-
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <img src="photo06.jpg" alt="素材">
-                            </a>
-                            <p>
-                                素材在庫・調達
-                            </p>
-
-                        </li>
-                    </ul>
-
-
-                </div>
-
-            </div>
-
-
-
-
-
-
-
-            <div class=topics>
-                <p>
-                    新着情報
                 </p>
-
-                <div class=topics-news>
-                    <dl>
-                        <dt>20180101</dt>
-                        <dd>「SECURITY ACTION宣言」を実施しましたのでご連絡いたします！</dd>
-                    </dl>
-                    <dl>
-                        <dt>20180101</dt>
-                        <dd>新着情報の内容が入ります。</dd>
-                    </dl>
-                    <dl>
-                        <dt>20180101</dt>
-                        <dd>新着情報の内容が入ります。</dd>
-                    </dl>
-                </div>
+                <p class="work-sec-subFont">事業選択</p>
+                <p class="work-sec-messege">
+                    <span>国内外を視野に入れたグローバルな素材の</span>
+                    <span>選択・調達力と、切断・加工も組み合わせた</span><br>
+                    <span>コーディネート力で、常にお客様ニーズの</span>
+                    <span>一歩先を見据えたご提案を致します</span>
+                </p>
             </div>
 
-        </article>
+            <ul class="work-sec-list">
+                <li>
+                    <a href="#"><img src="work-sec1.jpg" alt=""></a>
+                    <p>素材在庫・調達</p>
+                </li>
+                <li>
+                    <a href="#"><img src="work-sec2.jpg" alt=""></a>
+                    <p>部材加工</p>
 
-        <aside>
-            <div>
+                </li>
+                <li>
+                    <a href="#"><img src="work-sec3.jpg" alt=""></a>
+                    <p>グローバル対応</p>
 
+                </li>
+            </ul>
 
+        </div>
+
+        <!-- 企業情報セクション -->
+        <div class="work-sec">
+            <div class="work-sec-box">
+                <p class="work-sec-mainFont">
+                    COMPANY
+                </p>
+                <p class="work-sec-subFont">企業情報</p>
+                <p class="work-sec-messege">
+                    <span>約1000社のお取引先・50年間積み上げたノウハウ</span><br>
+                    <span>国内外を視野に入れたコーディネート営業で</span>
+                    <span>ハイレベルな供給体制を実現</span>
+                </p>
             </div>
-        </aside>
+
+            <ul class="work-sec-list">
+                <li>
+                    <a href="#"><img src="company-sec1.jpg" alt=""></a>
+                    <p>素材在庫・調達</p>
+                </li>
+                <li>
+                    <a href="#"><img src="company-sec2.jpg" alt=""></a>
+                    <p>部材加工</p>
+
+                </li>
+                <li>
+                    <a href="#"><img src="company-sec3.jpg" alt=""></a>
+                    <p>グローバル対応</p>
+
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- ニュースセクション -->
+        <div class=topics>
+            <p>
+                新着情報
+            </p>
+
+            <div class=topics-news>
+                <dl>
+                    <dt>20180101</dt>
+                    <dd>「SECURITY ACTION宣言」を実施しましたのでご連絡いたします！</dd>
+                </dl>
+                <dl>
+                    <dt>20180101</dt>
+                    <dd>新着情報の内容が入ります。</dd>
+                </dl>
+                <dl>
+                    <dt>20180101</dt>
+                    <dd>新着情報の内容が入ります。</dd>
+                </dl>
+            </div>
+        </div>
+
 
     </main>
 
@@ -168,20 +167,31 @@
                 All Rights Reserved.               
             </p>
 
-            <div class=snsbox>
-                <p class=twitter>
-                    click now
-                </p>
+            <div>
+                扶桑鋼管ヘッダー
             </div>
 
-        </div>
-
+        </div> 
     </footer>
 
-    
 
+    <!-- jquery 本体-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- jquery スライダー　本体 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-
+    <!-- jquery スライダー -->
+    <script>
+        $('.slider').slick({
+            autoplay: true,         //自動再生
+            autoplaySpeed: 8000,　  //自動再生のスピード
+            speed: 2000,     　 //スライドするスピード
+            dots: false,　　　　　　//スライドしたのドット
+            arrows: false,          //左右の矢印
+            infinite: true,　　　　//スライドのループ
+            pauseOnHover: false,   //ホバーしたときにスライドを一時停止しない　
+        });
+    </script>
 
 </body>
 </html>
