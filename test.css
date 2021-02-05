@@ -1,0 +1,326 @@
+html {
+    font-size: 62.5%;
+    width: 100vw;
+}
+
+body {
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+
+    /*要素が足りなくてもフッターを下部固定*/
+    display: flex;
+    /* flex-flow: column; */
+    flex-direction: column;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+}
+
+/*ヘッダー＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠*/
+
+/*【PC】ヘッダー*/
+header {
+    position: fixed;
+    z-index: 10;
+    display:flex;
+    align-items: center;
+    width:100%;
+    height:80px;
+    top:0px;
+    left: 0px;
+    background-color: white;
+
+}
+
+.head-logo {
+    width:26rem;
+    /* margin:7px; */
+}
+
+/*ヘッダーナビゲーション */
+.nav-bar {
+    margin: 0 0 0 auto;
+}
+
+.nav-bar ul {
+    display:flex;
+}
+
+.nav-bar li {
+    margin:1.5rem;
+    font-size: 2rem;
+}
+
+.nav-bar a {
+    color:black;
+}
+
+.head-br {
+    height:80px;
+}
+
+/*【スマホ】ヘッダー*/
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        display:none;
+    }
+}
+
+
+/*ヘッダーハンバーガーメニュー＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠*/
+
+/*【PC】ハンバーガー*/
+#nav-drawer {
+    display:none;
+}
+
+/*【スマホ】ハンバーガー*/
+@media screen and (max-width: 768px) {
+
+    #nav-drawer {
+        margin: 0 0 0 auto;
+        position: relative;
+        display:block;
+    }
+
+    /*チェックボックス等は非表示に*/
+    .nav-unshown {
+        display:none;
+    }
+
+    /*アイコンのスペース*/
+    #nav-open {
+        display: inline-block;
+        width: 30px;
+        height: 22px;
+        vertical-align: middle;
+    }
+
+    /*ハンバーガーアイコンをCSSだけで表現*/
+    #nav-open span, #nav-open span:before, #nav-open span:after {
+        position: absolute;
+        height: 5px;/*線の太さ*/
+        width: 30px;/*長さ*/
+        border-radius: 3px;
+        background: #555;
+        display: block;
+        content: '';
+        cursor: pointer;
+    }
+
+    #hanberger {
+        margin-right: 2rem;
+
+    }
+
+
+    #nav-open span:before {
+        bottom: -10px;
+    }
+
+    #nav-open span:after {
+        bottom: -20px;
+    }
+
+    /*閉じる用の薄黒カバー*/
+    #nav-close {
+        display: none;/*はじめは隠しておく*/
+        position: fixed;
+        z-index: 99;
+        top: 0;/*全体に広がるように*/
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0;
+        transition: .3s ease-in-out;
+    }
+
+    /*中身*/
+    #nav-content {
+        font-size: 1.5rem;
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;/*最前面に*/
+        width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+        max-width: 250px;/*最大幅（調整してください）*/
+        height: 100%;
+        background: #fff;/*背景色*/
+        transition: .3s ease-in-out;/*滑らかに表示*/
+        -webkit-transform: translateX(-105%);
+        transform: translateX(-105%);/*左に隠しておく*/
+    }
+
+    #nav-content a {
+        color:black;
+    }
+
+    #nav-content li {
+        padding:10px;
+    }
+
+
+    /*チェックが入ったらもろもろ表示*/
+    #nav-input:checked ~ #nav-close {
+        display: block;/*カバーを表示*/
+        opacity: .5;
+    }
+
+    #nav-input:checked ~ #nav-content {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);/*中身を表示（右へスライド）*/
+        box-shadow: 6px 0 25px rgba(0,0,0,.15);
+    }
+}
+
+/*メイン＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠*/
+main {
+    /*要素が足りなくてもフッターを下部固定*/
+    flex: 1; 
+}
+
+/* メイン画像スライダー */
+.slider img{
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* 【PC】事業選択 */
+.work-sec {
+    padding-top: 8rem;
+}
+
+.work-sec-mainFont {
+    font-size: 6rem;
+    letter-spacing: 0.4rem;
+    color: darkblue;
+    text-align: center;
+}
+
+.work-sec-subFont {
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.6rem;
+    margin: 1rem;
+}
+
+.work-sec-messege {
+    font-size: 1.8rem;
+    color:#666;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    margin: 4rem;
+}
+
+.work-sec-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.work-sec-list img {
+    width: 28rem;
+    margin: 1rem;
+}
+
+.work-sec-list p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*【スマホ】事業選択*/
+@media screen and (max-width: 768px) {
+    .work-sec-mainFont {
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .work-sec-messege {
+        font-size: 1.2rem;
+    }
+
+    .work-sec-messege span {
+        display:inline-block;
+    }
+
+}
+
+
+/* 【PC】ニュース */
+.topics {
+    width:80%;
+    margin:80px auto;
+}
+
+.topics p {
+    padding:10px;
+    font-size:3.2rem;
+    /* text-align: center; */
+    border-bottom: 2px solid darkgrey;
+}
+
+.topics-news {
+    margin-top: 10px;
+}
+
+.topics dl {
+    display:flex;
+    font-size:1.6rem;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.topics dd {
+    margin-left: 5rem;
+}
+
+/*【スマホ】事業選択*/
+@media screen and (max-width: 768px) {
+
+    .topics p {
+        font-size:2.4rem;
+
+    }
+
+
+    .topics dl {
+        display:flex;
+        flex-direction: column;
+        font-size:1.2rem;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/*フッター＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠*/
+
+.footerwrap {
+    background-color: #ccc;
+    height: 60px;
+    font-size: 1.2rem;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+
+}
+
+.copyright a {
+    color:black;
+}
+
+
