@@ -289,12 +289,9 @@ main {
 
     }
 
-
     .topics dl {
-        display:flex;
-        flex-direction: column;
         font-size:1.2rem;
-
+        flex-direction: column;
     }
 
 
